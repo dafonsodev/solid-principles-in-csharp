@@ -8,9 +8,4 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Following\" />
-    <Folder Include="Violating\" />
-  </ItemGroup>
-
 </Project>
