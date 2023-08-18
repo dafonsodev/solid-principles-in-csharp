@@ -1,9 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-using _1_SRP;
+﻿using _1_SRP;
 using _1_SRP.Following;
 using _1_SRP.Violating;
-
-Console.WriteLine("Hello, World!");
 
 User user = new()
 {
@@ -14,9 +11,11 @@ User user = new()
 
 // Bad Example (Violating SRP)
 var isAuthenticateBad = UserAuthenticationBad.AuthenticateOrRegisterUser(user);
+Console.WriteLine("Bad Example (Violating SRP)");
 Console.WriteLine($"AuthenticateOrRegisterUser is {isAuthenticateBad}");
 // Bad Example (Violating SRP)
 
+Console.WriteLine();
 
 // Good Example (Following SRP)
 try
@@ -25,6 +24,7 @@ try
     if (isAuthenticateGood)
     {
         // Do something
+        Console.WriteLine("Good Example (Following SRP)");
         Console.WriteLine($"Authenticate is {isAuthenticateGood}");
     }
     else
